@@ -1,0 +1,103 @@
+/* count_tab.html 전용 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: left;
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* 사이드바 설정 */
+.sidebar {
+    position: fixed;
+    top: 100px;
+    left: 20px;
+    width: 150px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.sidebar a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    padding: 10px;
+    background-color: #ddd;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.sidebar a:hover {
+    background-color: #bbb;
+}
+
+/* 컨테이너 설정 */
+.container {
+    margin-left: 200px;
+    margin-top: 20px;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.controls label {
+    flex: 1 0 150px;
+}
+
+.controls input[type="text"] {
+    flex: 2 0 300px;
+    padding: 5px;
+}
+
+.controls button {
+    flex: 1 0 100px;
+    padding: 5px;
+}
+
+#selectedFolder {
+    flex: 1 0 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.actions button {
+    padding: 10px;
+    flex: 1 0 100px;
+}
+
+/* 체크박스만 가운데 정렬 */
+input[type="checkbox"] {
+    display: block;
+    margin: 0 auto;
+}

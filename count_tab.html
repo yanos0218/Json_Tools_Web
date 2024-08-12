@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 개수 카운트</title>
+    <link rel="stylesheet" href="count_tab_style.css"> <!-- count_tab 전용 스타일 시트 -->
+</head>
+<body>
+
+    <h1>문자열 개수 카운트</h1>
+
+    <div class="sidebar">
+        <a href="index.html">메인</a>
+        <a href="count_tab.html">문자열 개수 카운트</a>
+        <a href="deletedormove_tab.html">파일 검색 및 이동</a>
+        <a href="FileInfo_tab.html">파일 정보 검색</a>
+    </div>
+
+    <div class="container">
+        <div class="controls">
+            <label for="regexPattern">찾을 정규식 패턴:</label>
+            <input type="text" id="regexPattern" placeholder="정규식 패턴 입력">
+            <button id="searchBtn">검색</button><br>
+
+            <input type="file" id="selectFolderBtn" webkitdirectory directory multiple style="display:none;">
+            <button id="selectFolderTrigger">검색 폴더 선택</button>
+            <span id="selectedFolder">검색 폴더: 선택되지 않음</span><br>
+            
+            <button id="clearResultsBtn">결과 초기화</button>
+            <button id="saveCsvBtn">CSV로 저장</button> <!-- CSV 저장 버튼 추가 -->
+        </div>
+
+        <div class="sorting-controls" style="margin-top: 20px;"> <!-- 위치 조정 -->
+            <label for="sortColumn">정렬 기준:</label>
+            <select id="sortColumn">
+                <option value="fileName">FileName</option>
+                <option value="count">Count</option>
+            </select>
+            <label for="sortOrder">정렬 순서:</label>
+            <select id="sortOrder">
+                <option value="asc">오름차순</option>
+                <option value="desc">내림차순</option>
+            </select>
+            <button id="refreshBtn">새로고침</button>
+        </div>
+
+        <div id="loadingMessage" style="display:none;">
+            Loading 중... <span id="estimatedTime"></span>
+        </div>
+
+        <table id="resultTable">
+            <thead>
+                <tr>
+                    <th>Check</th>
+                    <th>No</th> <!-- No 컬럼 추가 -->
+                    <th>FileName</th>
+                    <th>Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 검색 결과가 이곳에 표시됩니다 -->
+            </tbody>
+        </table>
+
+        <div id="paginationControls"></div> <!-- 페이지네이션 버튼들 -->
+
+        <div class="action-controls">
+            <button id="selectAllBtn">전체 선택</button>
+            <button id="deselectAllBtn">전체 해제</button>
+            <button id="deleteSelectedBtn">선택 삭제</button>
+        </div>
+    </div>
+
+    <script src="count_tab_script.js"></script> <!-- count_tab 전용 스크립트 -->
+</body>
+</html>
